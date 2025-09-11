@@ -88,7 +88,7 @@ footer {
 }
 
 .progress_bar--active {
-    animation: gradientMove 12s linear infinite;
+    animation: gradientMove 10s linear infinite;
     background: linear-gradient(270deg, #f97316, #eab308, #9333ea, #f97316);
     background-size: 400% 400%;
     transform: scaleX(1);
