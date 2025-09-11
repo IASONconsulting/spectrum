@@ -1,2 +1,1 @@
-# Spectrum redirection
-[Open site](https://iasonconsulting.github.io/spectrum/)
+# Spectrum app redirection

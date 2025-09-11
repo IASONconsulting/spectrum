@@ -6,37 +6,36 @@
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
-        
-        <title>Redirecting to Spectrum | PMS...</title>
+
+        <title>Spectrum | PMS</title>
     </head>
-    
+
     <body>
-        <div id="redirect-container">
-            <img draggable="false" src="assets/spectrum-logo.png" alt="spectrum">
-            
-            <h1>You’re being redirected...</h1>
-            <p>If the automatic redirect doesn’t start, please click the button below.</p>
-            
-            <button class="btn-primary" onclick="redirect()">Open Spectrum | PMS</button>
-        </div>
-        
-        <footer id="main-footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <a href="https://www.iasonconsulting.com" target="_blank">©2025 IASON consulting GmbH & Co KG</a>
+        <main class="page_main">
+            <section class="redirect_wrapper">
+                <div class="redirect_logo">
+                    <img src="assets/spectrum-logo.png" alt="Spectrum Logo" draggable="false"/>
                 </div>
-                <div class="footer-right">
-                    <a href="https://www.spectrum-md.com/imprint" target="_blank">Imprint</a>
-                    <span>&</span>
-                    <a href="https://www.spectrum-md.com/data-privacy" target="_blank">Privacy Policy</a>
+
+                <h1 class="redirect_title">You’re being redirected</h1>
+                <p class="redirect_subtitle">If the automatic redirect doesn’t start, please click the button below.</p>
+
+                <div class="progress">
+                    <div class="progress_bar" id="progressBar"></div>
                 </div>
+
+                <button type="button" class="redirect_button" id="redirectButton">Open Spectrum | PMS</button>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer_content">
+                <a href="https://www.iasonconsulting.com" target="_blank" class="footer_link">© 2025 IASON consulting GmbH & Co. KG</a>
+                <a href="https://www.spectrum-md.com/imprint" target="_blank" class="footer_link">Imprint</a>
+                <a href="https://www.spectrum-md.com/data-privacy" target="_blank" class="footer_link">Privacy Policy</a>
             </div>
         </footer>
 
-        <div id="loading-overlay">
-            <div class="spinner"></div>
-        </div>
-    
         <script src="js/script.js"></script>
     </body>
 </html>
