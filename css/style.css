@@ -296,4 +296,18 @@ footer {
         background-color: var(--color-primary);
         color: #111827;
     }
+
+    .redirect_button::after {
+        background: linear-gradient(
+            120deg,
+            rgba(249, 115, 22, 0) 0%,
+            rgba(234, 179, 8, 0.35) 45%,
+            rgba(147, 51, 234, 0.35) 55%,
+            rgba(249, 115, 22, 0) 100%
+        );
+    }
+
+    .redirect_button:hover::after {
+        animation: shine 1s ease forwards;
+    }
 }
