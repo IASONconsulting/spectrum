@@ -20,7 +20,8 @@
 }
 
 body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        sans-serif;
     background-color: var(--color-bg);
     color: var(--color-text);
     min-height: 100vh;
@@ -28,6 +29,7 @@ body {
     flex-direction: column;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 footer {
@@ -82,6 +84,7 @@ footer {
     transform: scaleX(0);
     transform-origin: left;
     animation: fillBar 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    will-change: transform;
 }
 
 .progress_bar--active {
@@ -89,6 +92,7 @@ footer {
     background: linear-gradient(270deg, #f97316, #eab308, #9333ea, #f97316);
     background-size: 400% 400%;
     transform: scaleX(1);
+    will-change: background-position;
 }
 
 .redirect_button {
@@ -104,7 +108,8 @@ footer {
     font-size: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18), 0 6px 20px rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    user-select: none;
 }
 
 .redirect_button:hover {
@@ -125,6 +130,7 @@ footer {
         rgba(255, 255, 255, 0) 100%
     );
     transform: skewX(-20deg);
+    pointer-events: none;
 }
 
 .redirect_button:hover::after {
@@ -140,13 +146,14 @@ footer {
     width: 7rem;
     height: 7rem;
     margin: 0 auto 1.5rem;
+    flex-shrink: 0;
 }
 
 .redirect_logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    animation: breathe 4s ease-in-out infinite;
+    display: block;
 }
 
 .redirect_subtitle {
@@ -165,6 +172,12 @@ footer {
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
     user-select: none;
+    background: linear-gradient(270deg, #f97316, #eab308, #9333ea, #f97316);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientTitle 12s ease infinite;
+    will-change: background-position;
 }
 
 .redirect_wrapper {
@@ -181,23 +194,11 @@ footer {
     animation: fadeIn 0.8s ease-out;
 }
 
-@keyframes breathe {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(1rem);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -208,9 +209,20 @@ footer {
     from {
         transform: scaleX(0);
     }
-
     to {
         transform: scaleX(1);
+    }
+}
+
+@keyframes gradientTitle {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
@@ -218,11 +230,9 @@ footer {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
@@ -232,7 +242,6 @@ footer {
     0% {
         left: -75%;
     }
-
     100% {
         left: 125%;
     }
@@ -244,7 +253,6 @@ footer {
         gap: 0.75rem;
         text-align: center;
     }
-
     .footer_link {
         font-size: 0.95rem;
     }
@@ -254,11 +262,9 @@ footer {
     .redirect_wrapper {
         padding: 2rem 1.5rem;
     }
-
     .redirect_title {
         font-size: 1.5rem;
     }
-
     .redirect_subtitle {
         font-size: 0.9rem;
     }
