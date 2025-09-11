@@ -1,24 +1,22 @@
-const customProtocol = "idpms://";
-const redirectDelay = 1500;
+const bar = document.getElementById("progressBar");
+const button = document.getElementById("redirectButton");
+
+document.addEventListener("DOMContentLoaded", () => {
+    bar.addEventListener("animationend", () => {
+        setTimeout(() => {
+            bar.classList.add("progress_bar--active");
+            
+            redirect();
+        }, 200);
+    }, { once: true });
+
+    button.addEventListener("click", redirect);
+});
 
 function redirect() {
-    console.info("You are being redirected...");
-
-    document.getElementById("loading-overlay").classList.add("active");
-    
     try {
-        window.location.href = customProtocol;
+        window.location.href = "idpms://";
     } catch (error) {
         console.error(`The forwarding failed, error: ${error}`);
     }
-
-    setTimeout(() => {
-        document.getElementById("loading-overlay").classList.remove("active");
-    }, 2 * redirectDelay);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    console.info(`You will be redirected in ${redirectDelay / 1000} seconds.`);
-
-    setTimeout(redirect, redirectDelay);
-});
