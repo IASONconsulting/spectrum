@@ -81,7 +81,7 @@ footer {
     background: var(--color-progress-gradient);
     transform: scaleX(0);
     transform-origin: left;
-    animation: fillBar 2.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: fillBar 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .progress_bar--active {
