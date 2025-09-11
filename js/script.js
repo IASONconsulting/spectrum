@@ -2,13 +2,9 @@ const bar = document.getElementById("progressBar");
 const button = document.getElementById("redirectButton");
 
 document.addEventListener("DOMContentLoaded", () => {
-    bar.addEventListener("animationend", () => {
-        setTimeout(() => {
-            bar.classList.add("progress_bar--active");
-            
-            redirect();
-        }, 200);
-    }, { once: true });
+    bar.addEventListener("animationend", (e) => {
+        if (e.animationName === "fillBar") redirect();
+    });
 
     button.addEventListener("click", redirect);
 });

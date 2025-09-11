@@ -80,19 +80,14 @@ footer {
 .progress_bar {
     height: 100%;
     border-radius: 9999px;
-    background: var(--color-progress-gradient);
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: fillBar 1.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    will-change: transform;
-}
-
-.progress_bar--active {
-    animation: gradientMove 10s linear infinite;
     background: linear-gradient(270deg, #f97316, #eab308, #9333ea, #f97316);
     background-size: 400% 400%;
-    transform: scaleX(1);
-    will-change: background-position;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation:
+        fillBar 1.25s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
+        gradientMove 10s linear infinite;
+    will-change: transform, background-position;
 }
 
 .redirect_button {
