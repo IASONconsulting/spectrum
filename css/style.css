@@ -84,8 +84,7 @@ footer {
     background-size: 400% 400%;
     transform: scaleX(0);
     transform-origin: left;
-    animation:
-        fillBar 1.25s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
+    animation: fillBar 1.25s cubic-bezier(0.4, 0, 0.2, 1) forwards,
         gradientMove 10s linear infinite;
     will-change: transform, background-position;
 }
@@ -249,7 +248,7 @@ footer {
     .redirect_title {
         font-size: 1.5rem;
     }
-    
+
     .redirect_subtitle {
         font-size: 0.9rem;
     }
