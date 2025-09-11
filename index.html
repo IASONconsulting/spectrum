@@ -17,7 +17,7 @@
             <h1>You’re being redirected...</h1>
             <p>If the automatic redirect doesn’t start, please click the button below.</p>
             
-            <button class="btn-primary" onclick="redirectToProtocol()">Open Spectrum | PMS</button>
+            <button class="btn-primary" onclick="redirect()">Open Spectrum | PMS</button>
         </div>
         
         <footer id="main-footer">
@@ -32,6 +32,10 @@
                 </div>
             </div>
         </footer>
+
+        <div id="loading-overlay">
+            <div class="spinner"></div>
+        </div>
     
         <script src="js/script.js"></script>
     </body>
