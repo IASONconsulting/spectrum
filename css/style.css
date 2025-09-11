@@ -172,12 +172,6 @@ footer {
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
     user-select: none;
-    background: linear-gradient(270deg, #f97316, #eab308, #9333ea, #f97316);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientTitle 12s ease infinite;
-    will-change: background-position;
 }
 
 .redirect_wrapper {
@@ -213,20 +207,6 @@ footer {
 
     to {
         transform: scaleX(1);
-    }
-}
-
-@keyframes gradientTitle {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
     }
 }
 
