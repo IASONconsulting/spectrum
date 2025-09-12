@@ -11,12 +11,7 @@
     --color-border: #e5e7eb;
     --color-primary: #111827;
     --color-primary-hover: #1f2937;
-    --color-progress-gradient: linear-gradient(
-        to right,
-        #f97316,
-        #eab308,
-        #9333ea
-    );
+    --color-progress-gradient: linear-gradient(to right, #f97316, #eab308, #9333ea);
 }
 
 body {
@@ -117,12 +112,7 @@ footer {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
     transform: skewX(-20deg);
     pointer-events: none;
 }
@@ -263,12 +253,7 @@ footer {
         --color-border: #374151;
         --color-primary: #f9fafb;
         --color-primary-hover: #e5e7eb;
-        --color-progress-gradient: linear-gradient(
-            to right,
-            #f97316,
-            #eab308,
-            #9333ea
-        );
+        --color-progress-gradient: linear-gradient(to right, #f97316, #eab308, #9333ea);
     }
 
     footer {
@@ -288,12 +273,7 @@ footer {
     }
 
     .redirect_button::after {
-        background: linear-gradient(
-            120deg,
-            rgba(249, 115, 22, 0) 0%,
-            rgba(234, 179, 8, 0.35) 45%,
-            rgba(147, 51, 234, 0.35) 55%,
-            rgba(249, 115, 22, 0) 100%
+        background: linear-gradient(120deg, rgba(249, 115, 22, 0) 0%, rgba(234, 179, 8, 0.35) 45%, rgba(147, 51, 234, 0.35) 55%, rgba(249, 115, 22, 0) 100%
         );
     }
 
