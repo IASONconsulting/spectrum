@@ -10,9 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function redirect() {
-	try {
-		window.location.href = "idpms://";
-	} catch (error) {
-		console.error(`The forwarding failed, error: ${error}`);
-	}
+	window.location.href = "idpms://";
 }
